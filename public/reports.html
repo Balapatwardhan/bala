@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8CBK5TF81"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z8CBK5TF81');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Inventory Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">InventoryMS</a>
+            <div>
+                <a href="index.html" class="text-white px-4 py-2">Home</a>
+                <a href="products.html" class="text-white px-4 py-2">Products</a>
+                <a href="suppliers.html" class="text-white px-4 py-2">Suppliers</a>
+                <a href="reports.html" class="text-white px-4 py-2">Reports</a>
+                <a href="login.html" class="text-white px-4 py-2">Log In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reports Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold text-gray-800 text-center">Reports</h1>
+            <p class="text-lg text-gray-600 mt-4 text-center">Generate and view detailed reports on inventory, sales, and more.</p>
+
+            <div class="mt-8 flex justify-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-2/3">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Filter Reports</h2>
+                    <form>
+                        <div class="mb-4">
+                            <label for="reportType" class="block text-gray-700">Report Type</label>
+                            <select id="reportType" class="w-full p-2 border border-gray-300 rounded">
+                                <option value="inventory">Inventory Report</option>
+                                <option value="sales">Sales Report</option>
+                                <option value="purchase">Purchase Report</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="dateRange" class="block text-gray-700">Date Range</label>
+                            <input type="text" id="dateRange" class="w-full p-2 border border-gray-300 rounded" placeholder="e.g., 01/01/2024 - 01/31/2024">
+                        </div>
+                        <button type="button" class="w-full bg-blue-600 text-white py-2 rounded">Generate Report</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Report Table -->
+            <div class="mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Report Data</h2>
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="border-b-2 p-4 text-gray-600">Date</th>
+                                <th class="border-b-2 p-4 text-gray-600">Item</th>
+                                <th class="border-b-2 p-4 text-gray-600">Quantity</th>
+                                <th class="border-b-2 p-4 text-gray-600">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border-b p-4">01/05/2024</td>
+                                <td class="border-b p-4">Item A</td>
+                                <td class="border-b p-4">10</td>
+                                <td class="border-b p-4">$100</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4">01/06/2024</td>
+                                <td class="border-b p-4">Item B</td>
+                                <td class="border-b p-4">5</td>
+                                <td class="border-b p-4">$50</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4 text-white text-center">
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
